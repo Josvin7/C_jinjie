@@ -30,7 +30,7 @@ void * my_memmove(void * des, const void * src, int num) {
 
 	return des;
 }
-int main() {
+int main1() {
 
 	char str[50] = "hdgfigfangwenhui";
 	my_memmove(str,str+1,3);
