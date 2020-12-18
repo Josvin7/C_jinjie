@@ -55,10 +55,10 @@ void AddPerson(contact_t *ct) {
 
 	}
 	person_t *p = ct->persons + ct->size;
-	printf("姓名# ");
-	scanf("	%s",p->name);
-	printf("电话# ");
-	scanf("	%s", p->tel);
+	printf("姓名#");
+	scanf("%s",p->name);
+	printf("电话#");
+	scanf("%s", p->tel);
 
 	// 情况2：通过电话号码查找要插入的人是否存在
 	if (IsExist(ct,p->tel) >= 0) {// 在这里存在的话返回的是他的标，不存在则返回-1
@@ -66,12 +66,12 @@ void AddPerson(contact_t *ct) {
 		return;
 	}
 	//如果存在了就直接返回推出，不存在则继续让用户输入相关信息
-	printf("性别# ");
-	scanf("	%c", &(p->sex));
-	printf("年纪# ");
-	scanf("	%d", &(p->age));
-	printf("地址# ");
-	scanf("	%s", p->address);
+	printf("性别#");
+	scanf(" %c",&(p->sex));
+	printf(" 年纪#");
+	scanf(" %d", &(p->age));
+	printf(" 地址#");
+	scanf(" %s", p->address);
 	ct->size += 1;
 	printf("... add success!\n");
 	
